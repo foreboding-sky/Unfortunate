@@ -10,27 +10,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private int maxJumps = 2;
     [SerializeField] private float gravity = 50f;
-    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float dashSpeed = 100f;
     [SerializeField] private float startDashTime = 0.1f;
-
+    [SerializeField] private float cooldownDashTime = 3f;
     [SerializeField] private CharacterController controller;
+
     private int numOfJumps;
     private float dashTime;
     private float verticalVelocity;
     private Vector3 moveDirection;
-
+    private Vector3 lastMoveDirection = Vector3.forward;
+    private float nextDashTime = 0f;
     void Start()
     {
         dashTime = 0;
     }
-
     void Update()
     {
         Jump();
-        MoveAndDash();
+        Move();
+        Dash();
         RotationProcess();
     }
-
     public void Jump()
     {
         if (controller.isGrounded)
@@ -48,25 +49,33 @@ public class PlayerMovement : MonoBehaviour
             numOfJumps++;
         }
     }
-
-    public void MoveAndDash()
+    public void Move()
     {
-        if (Input.GetButtonDown("Dash"))
+        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            dashTime = startDashTime;
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
+            lastMoveDirection = moveDirection;
+            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        }
+    }
+    public void Dash()
+    {
+        Vector3 dashDirection;
+        if(Time.time > nextDashTime)
+        {
+            if (Input.GetButtonDown("Dash"))
+            {
+                dashTime = startDashTime;
+                nextDashTime = Time.time + cooldownDashTime;
+            }
         }
         if (dashTime > 0)
         {
             dashTime -= Time.deltaTime;
-            moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed * dashSpeed, verticalVelocity, Input.GetAxis("Vertical") * moveSpeed * dashSpeed);
+            dashDirection = lastMoveDirection * dashSpeed;
+            controller.Move(dashDirection * Time.deltaTime);
         }
-        else
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, verticalVelocity, Input.GetAxis("Vertical") * moveSpeed);
-        }
-        controller.Move(moveDirection * Time.deltaTime);
     }
-
     public void RotationProcess()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
