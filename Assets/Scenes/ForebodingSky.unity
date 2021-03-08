@@ -348,8 +348,9 @@ MonoBehaviour:
   jumpForce: 15
   maxJumps: 2
   gravity: 50
-  dashSpeed: 10
+  dashSpeed: 100
   startDashTime: 0.1
+  cooldownDashTime: 3
   controller: {fileID: 342435858}
 --- !u!143 &342435858
 CharacterController:
