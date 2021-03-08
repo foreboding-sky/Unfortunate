@@ -21,7 +21,7 @@ public class CameraLockOn : MonoBehaviour
     public void CamLock()
     {
         //Vector3 desiredPosition = target.position - offset;
-        Vector3 desiredPosition = new Vector3(target.position.x - offset.x, 25f, target.position.z - offset.z);
+        Vector3 desiredPosition = new Vector3(target.position.x - offset.x, transform.position.y, target.position.z - offset.z);
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, camSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
     }
