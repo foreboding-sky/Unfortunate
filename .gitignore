@@ -60,5 +60,4 @@ crashlytics-build.properties
 
 # personal ignore
 
-/Packages/
-
+packages-lock.json
