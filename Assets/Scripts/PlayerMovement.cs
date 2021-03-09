@@ -51,12 +51,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Move()
     {
-        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        { 
             lastMoveDirection = moveDirection;
-            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
         }
+        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
     public void Dash()
     {
