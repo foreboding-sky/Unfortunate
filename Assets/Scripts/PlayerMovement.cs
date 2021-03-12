@@ -21,15 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 lastMoveDirection = Vector3.forward;
     private float nextDashTime = 0f;
-    private bool canMove;
     void Start()
     {
         dashTime = 0;
-        canMove = true;
     }
     void Update()
     {
-       
         Move();
         Jump();
         Dash();
@@ -69,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Dash"))
             {
                 dashTime = startDashTime;
-                canMove = false;
                 nextDashTime = Time.time + cooldownDashTime;
             }
         }
@@ -80,8 +76,6 @@ public class PlayerMovement : MonoBehaviour
             dashDirection.y = 0;
             controller.Move(dashDirection * dashSpeed * Time.deltaTime);
         }
-        if (dashTime <= 0)
-            canMove = true;
     }
     public void RotationProcess()
     {

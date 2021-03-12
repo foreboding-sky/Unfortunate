@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class LifeSystem : MonoBehaviour
 {
     [SerializeField] private int health;
@@ -44,6 +44,24 @@ public class LifeSystem : MonoBehaviour
                 continue;
             }
             hearts[i].enabled = false;
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            health = 0;
+            Death();
+        }
+    }
+    public void Death()
+    {
+        if (health <= 0)
+        {
+            //SceneManager.LoadScene(0);
+            Debug.Log("ded");
+            health = maxHealth;
         }
     }
 }
