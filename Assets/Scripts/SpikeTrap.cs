@@ -6,19 +6,14 @@ public class SpikeTrap : MonoBehaviour
 {
     [SerializeField] private int damage = 1;
     [SerializeField] private float cooldown = 1f;
-    [SerializeField] private List<Spike> ListSpikes = new List<Spike>();
+    [SerializeField] private Spikes spikes;
     private bool SpikesReloaded;
     private bool canDamage;
     void Start()
     {
         canDamage = false;
         SpikesReloaded = true;
-        ListSpikes.Clear();
-        Spike[] arr = this.gameObject.GetComponentsInChildren<Spike>();
-        foreach (Spike s in arr)
-        {
-            ListSpikes.Add(s);
-        }
+        spikes = this.GetComponentInChildren<Spikes>();
     }
     void Update()
     {
@@ -33,18 +28,12 @@ public class SpikeTrap : MonoBehaviour
         SpikesReloaded = false;
         yield return new WaitForSeconds(cooldown);
 
-        foreach (Spike s in ListSpikes)
-        {
-            s.Shoot();
-        }
+        spikes.Shoot();
         this.GetComponent<BoxCollider>().enabled = true;
 
         yield return new WaitForSeconds(cooldown);
 
-        foreach (Spike s in ListSpikes)
-        {
-            s.Retract();
-        }
+        spikes.Retract();
         this.GetComponent<BoxCollider>().enabled = false;
 
         SpikesReloaded = true;

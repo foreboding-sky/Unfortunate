@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spike : MonoBehaviour
+public class Spikes : MonoBehaviour
 {
     [SerializeField] private float lerpTime = 0.1f;
     public void Shoot()
     {
-        //Retracted spike y is -0.4 in localPosition
-        if (this.transform.localPosition.y < 0f)
-        {
-            StartCoroutine(_Shoot());
-        }
+        StartCoroutine(_Shoot());
     }
     IEnumerator _Shoot()
     {
@@ -32,11 +28,7 @@ public class Spike : MonoBehaviour
     }
     public void Retract()
     {
-        //Activated spike y is 0.6 in localPosition
-        if (this.transform.localPosition.y > 0f)
-        {
-            StartCoroutine(_Retract());
-        }
+        StartCoroutine(_Retract());
     }
     IEnumerator _Retract()
     {
