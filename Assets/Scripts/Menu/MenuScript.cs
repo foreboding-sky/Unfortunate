@@ -5,14 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+    public GameObject settingsPanel;
     public void StartGame()
     {
         SceneManager.LoadScene(0);
 
     }
-    public void Setting()
+    public void Settings()
     {
+        settingsPanel.SetActive(true);
 
+    }
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
     }
     public void Exit()
     {
