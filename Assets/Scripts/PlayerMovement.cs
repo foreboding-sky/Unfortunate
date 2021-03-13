@@ -27,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Jump();
         Move();
+        Jump();
         Dash();
         RotationProcess();
     }
@@ -51,12 +51,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Move()
     {
-        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
             lastMoveDirection = moveDirection;
-            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
         }
+        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
     public void Dash()
     {
@@ -72,8 +72,9 @@ public class PlayerMovement : MonoBehaviour
         if (dashTime > 0)
         {
             dashTime -= Time.deltaTime;
-            dashDirection = lastMoveDirection * dashSpeed;
-            controller.Move(dashDirection * Time.deltaTime);
+            dashDirection = lastMoveDirection;
+            dashDirection.y = 0;
+            controller.Move(dashDirection * dashSpeed * Time.deltaTime);
         }
     }
     public void RotationProcess()
