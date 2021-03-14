@@ -8,6 +8,7 @@ public class MenuScript : MonoBehaviour
     public GameObject settingsPanel;
     public void StartGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
 
     }
