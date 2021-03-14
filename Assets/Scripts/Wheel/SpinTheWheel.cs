@@ -12,12 +12,11 @@ public class SpinTheWheel : MonoBehaviour
 
     float turn;
     [SerializeField] float timer;
-    bool is_spinning, was_active;
+    bool is_spinning;
     // Start is called before the first frame update
     void Start()
     {
         is_spinning = false;
-        was_active = false;
         timer = 0;
         turn = -1;
     }
