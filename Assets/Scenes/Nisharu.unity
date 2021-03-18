@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 2006695052}
   - component: {fileID: 2006695055}
   - component: {fileID: 2006695056}
+  - component: {fileID: 2006695057}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -530,6 +531,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: b10b9dd1-7330-4a8c-ac0a-209f42aea15f
+--- !u!114 &2006695057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006695051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ddd939a5c9cdb4c94daad65a1cd8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_hearts: 3
+  curr_hearts: 6
+  dash_cd: 3
+  jump_force: 15
+  jump_number: 2
+  gravity: 50
+  dash_speed: 100
+  move_speed: 10
+  rotation_speed: 50
+  start_dash_time: 0.1
 --- !u!1 &2100807994
 GameObject:
   m_ObjectHideFlags: 0

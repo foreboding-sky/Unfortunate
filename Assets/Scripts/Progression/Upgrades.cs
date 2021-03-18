@@ -19,9 +19,9 @@ public class Upgrades : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
     }
-    [SerializeField] int bonus_hearts;
-    [SerializeField] float dash_cdr;
-    [SerializeField] int regen;
+    public int bonus_hearts = 0;
+    public float dash_cdr = 1;
+    public int regen = 0;
 
     public string BuyHearts(int points)
     {
@@ -42,7 +42,7 @@ public class Upgrades : MonoBehaviour
 
     public string BuyDash(int points)
     {
-        if (dash_cdr >= 50)
+        if (dash_cdr <= 0.5f)
         {
             return "You cannot reduce dash cooldown more!";
         }
@@ -50,7 +50,7 @@ public class Upgrades : MonoBehaviour
         {
             if (FortunePoints.instance.CanBuy(points))
             {
-                dash_cdr += 25;
+                dash_cdr -= 0.25f;
                 return "You reduced dash cooldown!";
             }
             else return "You dont have enough points!";

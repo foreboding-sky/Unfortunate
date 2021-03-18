@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float rotationSpeed = 50f;
-    [SerializeField] private float jumpForce = 15f;
-    [SerializeField] private int maxJumps = 2;
-    [SerializeField] private float gravity = 50f;
-    [SerializeField] private float dashSpeed = 100f;
-    [SerializeField] private float startDashTime = 0.1f;
-    [SerializeField] private float cooldownDashTime = 3f;
+    [SerializeField] private float moveSpeed = 0;
+    [SerializeField] private float rotationSpeed = 0;
+    [SerializeField] private float jumpForce = 0;
+    [SerializeField] private int maxJumps = 0;
+    [SerializeField] private float gravity = 0;
+    [SerializeField] private float dashSpeed = 0;
+    [SerializeField] private float startDashTime = 0;
+    [SerializeField] private float cooldownDashTime = 0;
     [SerializeField] private CharacterController controller;
 
     private int numOfJumps;
@@ -23,6 +23,14 @@ public class PlayerMovement : MonoBehaviour
     private float nextDashTime = 0f;
     void Start()
     {
+        moveSpeed = PlayerStats.instance.move_speed;
+        rotationSpeed = PlayerStats.instance.rotation_speed;
+        jumpForce = PlayerStats.instance.jump_force;
+        maxJumps = PlayerStats.instance.jump_number;
+        gravity = PlayerStats.instance.gravity;
+        dashSpeed = PlayerStats.instance.dash_speed;
+        startDashTime = PlayerStats.instance.start_dash_time;
+        cooldownDashTime = PlayerStats.instance.dash_cd * Upgrades.instance.dash_cdr;
         dashTime = 0;
     }
     void Update()
