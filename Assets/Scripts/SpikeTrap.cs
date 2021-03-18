@@ -7,17 +7,17 @@ public class SpikeTrap : MonoBehaviour
     [SerializeField] private int damage = 1;
     [SerializeField] private float cooldown = 1f;
     [SerializeField] private Spikes spikes;
-    private bool SpikesReloaded;
+    private bool spikesReloaded;
     private bool canDamage;
     void Start()
     {
         canDamage = false;
-        SpikesReloaded = true;
+        spikesReloaded = true;
         spikes = this.GetComponentInChildren<Spikes>();
     }
     void Update()
     {
-        if (SpikesReloaded)
+        if (spikesReloaded)
         {
             canDamage = true;
             StartCoroutine(_TriggerSpikes());     
@@ -25,7 +25,7 @@ public class SpikeTrap : MonoBehaviour
     }
     IEnumerator _TriggerSpikes()
     {
-        SpikesReloaded = false;
+        spikesReloaded = false;
         yield return new WaitForSeconds(cooldown);
 
         spikes.Shoot();
@@ -36,7 +36,7 @@ public class SpikeTrap : MonoBehaviour
         spikes.Retract();
         this.GetComponent<BoxCollider>().enabled = false;
 
-        SpikesReloaded = true;
+        spikesReloaded = true;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -44,7 +44,7 @@ public class SpikeTrap : MonoBehaviour
 
         if (playerHealth != null && canDamage)
         {
-            Debug.Log("OnTriggerEnter");
+            Debug.Log("Spikes collided with the player");
             playerHealth.TakeDamage(damage);
             canDamage = false;
         }
