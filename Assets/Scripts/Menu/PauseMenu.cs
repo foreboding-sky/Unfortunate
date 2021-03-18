@@ -11,6 +11,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject pause_menu;
     bool paused = false;
 
+    public void Save()
+    {
+        SaveSystem.instance.Save();
+    }
+    public void Load()
+    {
+        SaveSystem.instance.Load();
+    }
     public void Resume()
     {
         Time.timeScale = 1;

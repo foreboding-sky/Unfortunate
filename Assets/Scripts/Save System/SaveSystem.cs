@@ -26,14 +26,14 @@ public class SaveSystem : MonoBehaviour
 
     }
     [ContextMenu("Save")]
-    void Save()
+    public void Save()
     {
         var state = LoadFile();
         CaptureState(state);
         SaveFile(state);
     }
     [ContextMenu("Load")]
-    void Load()
+    public void Load()
     {
         var state = LoadFile();
         RestoreState(state);      

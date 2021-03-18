@@ -21,13 +21,7 @@ public class FortunePoints : MonoBehaviour, ISaveable
 
     }
     [SerializeField] int fortune_points;
-    public object CaptureState()
-    {
-        return new SaveData
-        {
-            fortune_points = fortune_points
-        };
-    }
+
     public bool CanBuy(int points)
     {
         if (fortune_points >= points && fortune_points >=0 && points >= 0)
@@ -44,6 +38,16 @@ public class FortunePoints : MonoBehaviour, ISaveable
     public int CheckPoints()
     {
         return fortune_points;
+    }
+
+    //Saving system
+
+    public object CaptureState()
+    {
+        return new SaveData
+        {
+            fortune_points = fortune_points
+        };
     }
 
     public void RestoreState(object state)
