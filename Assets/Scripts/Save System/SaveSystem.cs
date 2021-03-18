@@ -10,6 +10,21 @@ public class SaveSystem : MonoBehaviour
 {
     private string data_path => $"{Application.persistentDataPath}/save.txt";
 
+    public static SaveSystem instance = null;
+    void Start()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance == this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+    }
     [ContextMenu("Save")]
     void Save()
     {
