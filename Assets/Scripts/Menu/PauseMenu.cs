@@ -10,10 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject settings;
     public GameObject pause_menu;
     bool paused = false;
-    void Start()
-    {
-        
-    }
+
     public void Resume()
     {
         Time.timeScale = 1;
