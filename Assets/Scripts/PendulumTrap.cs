@@ -9,13 +9,13 @@ public class PendulumTrap : MonoBehaviour
     [SerializeField] private float speed = 2.0f;
     [SerializeField] private float start_time = 2.0f;
     [SerializeField] private int   damage = 1;
-    private PendulumTrapCollision pendulumCollider;
+    private TrapCollision pendulumCollider;
     Quaternion start, end;
     void Start()
     {
         start = PendulumRotation(angle);
         end = PendulumRotation(-angle);
-        pendulumCollider = GetComponentInChildren<PendulumTrapCollision>();
+        pendulumCollider = GetComponentInChildren<TrapCollision>();
         pendulumCollider.damage = this.damage;
     }
     void FixedUpdate()

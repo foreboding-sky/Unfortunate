@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PendulumTrapCollision : MonoBehaviour
+public class TrapCollision : MonoBehaviour
 {
     public int damage = 1;
     private void OnTriggerEnter(Collider other)

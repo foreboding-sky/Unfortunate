@@ -21,9 +21,8 @@ public class Bullet : MonoBehaviour
             playerHealth.TakeDamage(damage);
             canDamage = false;
         }
-        //ContactPoint contact = other.contacts[0];
+        Vector3 position = other.ClosestPoint(transform.position);
         //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        Vector3 position = other.transform.position;
         ParticleSystem hitVFX = Instantiate(destroyEffect, position, Quaternion.identity);
         Destroy(gameObject);
     }
