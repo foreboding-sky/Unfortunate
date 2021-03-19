@@ -5,6 +5,13 @@ using UnityEngine;
 public class Spikes : MonoBehaviour
 {
     [SerializeField] private float lerpTime = 0.1f;
+    private Vector3 targetUp, targetDown;
+
+    private void Start()
+    {
+        targetDown = transform.localPosition;
+        targetUp = new Vector3(transform.localPosition.x, transform.localPosition.y + 1f, transform.localPosition.z);
+    }
     public void Shoot()
     {
         StartCoroutine(_Shoot());
@@ -13,7 +20,6 @@ public class Spikes : MonoBehaviour
     {
         float startTime = Time.time;
         Vector3 source = transform.localPosition;
-        Vector3 target = new Vector3(transform.localPosition.x, transform.localPosition.y + 1f, transform.localPosition.z);
 
         float delay = 0f;
         //Random delay for each spike
@@ -22,7 +28,7 @@ public class Spikes : MonoBehaviour
 
         while (Time.time < startTime + lerpTime)
         {
-            transform.localPosition = Vector3.Lerp(source, target, (Time.time - startTime) / lerpTime);
+            transform.localPosition = Vector3.Lerp(source, targetUp, (Time.time - startTime) / lerpTime);
             yield return null;
         }
     }
@@ -33,7 +39,6 @@ public class Spikes : MonoBehaviour
     IEnumerator _Retract()
     {
         Vector3 source = transform.localPosition;
-        Vector3 target = new Vector3(transform.localPosition.x, transform.localPosition.y - 1f, transform.localPosition.z);
 
         float delay = 0f;
         //Random delay for each spike
@@ -43,7 +48,7 @@ public class Spikes : MonoBehaviour
 
         while (Time.time < startTime + lerpTime)
         {
-            transform.localPosition = Vector3.Lerp(source, target, (Time.time - startTime) / lerpTime);
+            transform.localPosition = Vector3.Lerp(source, targetDown, (Time.time - startTime) / lerpTime);
             yield return null;
         }
     }

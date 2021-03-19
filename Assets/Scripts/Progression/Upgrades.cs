@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Upgrades : MonoBehaviour
+public class Upgrades : MonoBehaviour, ISaveable
 {
     public static Upgrades instance = null;
     void Start()
@@ -17,11 +18,11 @@ public class Upgrades : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
+        dash_cdr = 1;
     }
-    [SerializeField] int bonus_hearts;
-    [SerializeField] float dash_cdr;
-    [SerializeField] int regen;
+    public int bonus_hearts;
+    public float dash_cdr;
+    public int regen;
 
     public string BuyHearts(int points)
     {
@@ -42,7 +43,7 @@ public class Upgrades : MonoBehaviour
 
     public string BuyDash(int points)
     {
-        if (dash_cdr >= 50)
+        if (dash_cdr <= 0.5f)
         {
             return "You cannot reduce dash cooldown more!";
         }
@@ -50,7 +51,7 @@ public class Upgrades : MonoBehaviour
         {
             if (FortunePoints.instance.CanBuy(points))
             {
-                dash_cdr += 25;
+                dash_cdr -= 0.25f;
                 return "You reduced dash cooldown!";
             }
             else return "You dont have enough points!";
@@ -71,6 +72,33 @@ public class Upgrades : MonoBehaviour
             }
             else return "You dont have enough points!";
         }
+    }
+
+    //Saving system
+
+    public object CaptureState()
+    {
+        return new SaveData
+        {
+            bonus_hearts = bonus_hearts,
+            dash_cdr = dash_cdr,
+            regen = regen
+        };
+    }
+    public void RestoreState(object state)
+    {
+        var saveData = (SaveData)state;
+        bonus_hearts = saveData.bonus_hearts;
+        dash_cdr = saveData.dash_cdr;
+        regen = saveData.regen;
+    }
+
+    [Serializable]
+    private struct SaveData
+    {
+        public int bonus_hearts;
+        public float dash_cdr;
+        public int regen;
     }
 
 }
