@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
 
         if (playerHealth != null && canDamage)
         {
-            Debug.Log("Bullet collides with the player");
+            Debug.Log("Bullet collided with the player");
             playerHealth.TakeDamage(damage);
             canDamage = false;
         }
