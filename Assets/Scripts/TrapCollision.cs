@@ -11,7 +11,7 @@ public class TrapCollision : MonoBehaviour
 
         if (playerHealth != null)
         {
-            Debug.Log("Pendulum collided with the player");
+            Debug.Log("Trigger collided with the player");
             playerHealth.TakeDamage(damage);
         }
     }

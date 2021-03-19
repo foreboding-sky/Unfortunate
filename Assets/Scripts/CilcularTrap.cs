@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CilcularTrap : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 100f;
+    [SerializeField] private float rotationSpeed = 50f;
     // Update is called once per frame
     void Update()
     {
