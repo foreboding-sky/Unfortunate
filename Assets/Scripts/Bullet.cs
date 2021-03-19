@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     {
         canDamage = true;
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         LifeSystem playerHealth = other.gameObject.transform.root.gameObject.GetComponent<LifeSystem>();
 
@@ -21,10 +21,10 @@ public class Bullet : MonoBehaviour
             playerHealth.TakeDamage(damage);
             canDamage = false;
         }
-        ContactPoint contact = other.contacts[0];
-        Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        Vector3 position = contact.point;
-        ParticleSystem hitVFX = Instantiate(destroyEffect, position, rotation);
+        //ContactPoint contact = other.contacts[0];
+        //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        Vector3 position = other.transform.position;
+        ParticleSystem hitVFX = Instantiate(destroyEffect, position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
