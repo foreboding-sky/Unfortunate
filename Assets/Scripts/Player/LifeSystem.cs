@@ -10,12 +10,22 @@ public class LifeSystem : MonoBehaviour
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite activeHeart;
     [SerializeField] private Sprite disabledHeart;
+    [SerializeField] private int regen; 
     private void Start()
     {
+        maxHealth = PlayerStats.instance.max_hearts + Upgrades.instance.bonus_hearts;
+        health = PlayerStats.instance.curr_hearts;
+        regen = Upgrades.instance.regen;
+        Heal(regen);
         if (maxHealth > hearts.Length)
             maxHealth = hearts.Length;
         if (health > maxHealth)
             health = maxHealth;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerStats.instance.curr_hearts = health;
     }
     void Update()
     {
@@ -54,6 +64,12 @@ public class LifeSystem : MonoBehaviour
             health = 0;
             Death();
         }
+    }
+    public void Heal(int healing)
+    {
+        health += healing;
+        if (health > maxHealth)
+            health = maxHealth;
     }
     public void Death()
     {
