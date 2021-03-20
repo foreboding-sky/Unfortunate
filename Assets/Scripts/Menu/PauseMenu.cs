@@ -28,12 +28,6 @@ public class PauseMenu : MonoBehaviour
     public void Settings()
     {
         settings.SetActive(true);
-        pause_menu.SetActive(false);
-    }
-    public void ExitSettings()
-    {
-        settings.SetActive(false);
-        pause_menu.SetActive(true);
     }
 
     public void ToMainMenu()

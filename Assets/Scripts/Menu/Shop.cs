@@ -7,14 +7,12 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     public GameObject shop_menu;
-    //public GameObject text;
     public Text text;
-    bool paused = false;
-    public void Resume()
+
+
+    public void Return()
     {
-        Time.timeScale = 1;
-        shop_menu.SetActive(false);
-        paused = false;
+        SceneManager.LoadScene(0);       
     }
     public void BuyHearts()
     {
@@ -30,29 +28,6 @@ public class Shop : MonoBehaviour
     }
 
 
-
-    // Update is called once per frame
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (paused == true)
-            {
-                Time.timeScale = 1;
-                shop_menu.SetActive(false);
-                paused = false;
-            }
-            else
-            {
-                Time.timeScale = 0;
-                shop_menu.SetActive(true);
-                paused = true;
-            }
-
-        }
-
-    }
 }
 
 

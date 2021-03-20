@@ -17,10 +17,6 @@ public class MenuScript : MonoBehaviour
         settingsPanel.SetActive(true);
 
     }
-    public void CloseSettings()
-    {
-        settingsPanel.SetActive(false);
-    }
     public void Exit()
     {
         Application.Quit();

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Nisharu.unity
-    guid: 3d2bc141ca87f6d42b864ea9bdcf30c9
+    path: Assets/Scenes/Wheel of Unfortune.unity
+    guid: 4d865632484d74249b8561512ab4a635
   - enabled: 1
     path: Assets/Scenes/Levels/Level 1.unity
     guid: 87ef15fde8487f14ea9a2840b07da3ee
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Main Menu.unity
     guid: 1a055936d1a58cf44aefb08a54dab7d4
+  - enabled: 1
+    path: Assets/Scenes/Menu/Shop.unity
+    guid: 522c9b3fcce625040a27775058ea6320
   m_configObjects: {}
