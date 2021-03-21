@@ -387,7 +387,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 5
-  hearts: []
+  hearts:
+  - {fileID: 5680349597805885643}
+  - {fileID: 2729461481578232327}
+  - {fileID: 327304906797315899}
+  - {fileID: 5991790336475561994}
+  - {fileID: 1169426900457587763}
   activeHeart: {fileID: 21300000, guid: 0dca15266196e8c45854fbad0b6f7bac, type: 3}
   disabledHeart: {fileID: 21300000, guid: deb9904c3065b784ebdcfb0851204745, type: 3}
   regen: 0

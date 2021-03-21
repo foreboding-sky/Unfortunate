@@ -103,15 +103,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_hearts: 3
-  curr_hearts: 6
-  dash_cd: 3
-  jump_force: 15
-  jump_number: 2
-  gravity: 50
-  dash_speed: 100
+  curr_hearts: 5
+  dash_cd: 0.5
+  jump_force: 1
+  jump_number: 1
+  gravity: 2.3
+  dash_speed: 40
   move_speed: 10
   rotation_speed: 50
-  start_dash_time: 0.1
+  start_dash_time: 0.3
 --- !u!1 &7164773677360016506
 GameObject:
   m_ObjectHideFlags: 0
