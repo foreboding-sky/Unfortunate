@@ -72,18 +72,17 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && numOfJumps < maxJumps)
         {
-            animator.SetTrigger(Jumping);
+            //animator.SetTrigger(Jumping);
             verticalVelocity = jumpForce;
             numOfJumps++;
         }
     }
     public void Move()
     {
-
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            lastMoveDirection = moveDirection;
+            lastMoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), verticalVelocity, Input.GetAxisRaw("Vertical"));
         }
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
@@ -95,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Dash"))
             {
                 IsDashing = true;
-                animator.SetTrigger(Dashing);
+                //animator.SetTrigger(Dashing);
                 dashTime = startDashTime;
                 nextDashTime = Time.time + cooldownDashTime;
             }
@@ -104,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         {
             dashTime -= Time.deltaTime;
             dashDirection = lastMoveDirection;
-            dashDirection.y = 0;
+            dashDirection.y = 0; 
 
             controller.Move(dashDirection * dashSpeed * Time.deltaTime);
         }
