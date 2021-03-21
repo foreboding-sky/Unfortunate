@@ -8,6 +8,7 @@ public class FortunePoints : MonoBehaviour, ISaveable
     public static FortunePoints instance = null;
     void Start ()
     {
+
         if (instance == null)
         { 
             instance = this; 
@@ -20,7 +21,7 @@ public class FortunePoints : MonoBehaviour, ISaveable
         DontDestroyOnLoad(gameObject);
 
     }
-    [SerializeField] int fortune_points;
+    public int fortune_points = 0;
 
     public bool CanBuy(int points)
     {
@@ -41,6 +42,11 @@ public class FortunePoints : MonoBehaviour, ISaveable
     }
 
     //Saving system
+
+    public void ResetState()
+    {
+        fortune_points = 0;
+    }
 
     public object CaptureState()
     {

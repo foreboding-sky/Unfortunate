@@ -74,7 +74,16 @@ public class Upgrades : MonoBehaviour, ISaveable
         }
     }
 
+
+
     //Saving system
+
+    public void ResetState()
+    {
+        bonus_hearts = 0;
+        dash_cdr = 1;
+        regen = 0;
+    }
 
     public object CaptureState()
     {

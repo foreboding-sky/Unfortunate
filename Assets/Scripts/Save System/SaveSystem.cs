@@ -5,10 +5,11 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEditor.PackageManager;
 
 public class SaveSystem : MonoBehaviour
 {
-    private string data_path => $"{Application.persistentDataPath}/save.txt";
+    public string data_path => $"{Application.persistentDataPath}/save.txt";
 
     public static SaveSystem instance = null;
     void Start()
@@ -17,7 +18,7 @@ public class SaveSystem : MonoBehaviour
         {
             instance = this;
         }
-        else if (instance == this)
+        else
         {
             Destroy(gameObject);
         }
@@ -31,6 +32,13 @@ public class SaveSystem : MonoBehaviour
         var state = LoadFile();
         CaptureState(state);
         SaveFile(state);
+    }
+    public void NewGame()
+    {
+        var state = ResetSaveFile();
+        CaptureState(state);
+        SaveFile(state);
+        RestoreState(state);
     }
     [ContextMenu("Load")]
     public void Load()
@@ -58,6 +66,14 @@ public class SaveSystem : MonoBehaviour
             return (Dictionary<string, object>)formatter.Deserialize(stream);
         }
 
+    }
+    private Dictionary<string, object> ResetSaveFile()
+    {
+        foreach (var saveable in FindObjectsOfType<Saveable>())
+        {
+            saveable.ResetState();
+        }
+        return new Dictionary<string, object>();
     }
     private void CaptureState(Dictionary<string, object> state)
     {
