@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 lastMoveDirection = Vector3.forward;
     private float nextDashTime = 0f;
     private bool IsDashing = false;
+    private bool Moving = false;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -42,25 +43,26 @@ public class PlayerMovement : MonoBehaviour
         cooldownDashTime = PlayerStats.instance.dash_cd * Upgrades.instance.dash_cdr;
         dashTime = 0;
     }
-    void Update()
+    private void Update()
     {
-        if(!IsDashing) Move();
-        Jump();
         Dash();
+        if (!IsDashing)
+        {
+            MovementProccess();
+            Jump();
+        }
         RotationProcess();
-        //AnimatorHelper();
+        AnimatorHelper();
     }
-    public void AnimatorHelper()
+    private void AnimatorHelper()
     {
         if (controller.isGrounded) animator.SetBool(Grounded, true);
         else animator.SetBool(Grounded, false);
 
-        if(controller.isGrounded && (lastMoveDirection.x != 0 || lastMoveDirection.z != 0)) animator.SetBool(IsMoving , true);
+        if(controller.isGrounded && Moving) animator.SetBool(IsMoving , true);
         else animator.SetBool(IsMoving, false);
-
     }
-    
-    public void Jump()
+    private void Jump()
     {
         if (controller.isGrounded)
         {
@@ -78,17 +80,24 @@ public class PlayerMovement : MonoBehaviour
             numOfJumps++;
         }
     }
-    public void Move()
+    private void MovementProccess()
     {
+        //Animator
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            Moving = true;
+        else
+            Moving = false;
+        //Calculation move vector
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
+        //Calculations for Dash script
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            lastMoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), verticalVelocity, Input.GetAxisRaw("Vertical"));
-
+            lastMoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         }
+        //Moving the player
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
-    public void Dash()
+    private void Dash()
     {
         Vector3 dashDirection;
         if(Time.time > nextDashTime)
@@ -103,15 +112,14 @@ public class PlayerMovement : MonoBehaviour
         }
         if (dashTime > 0)
         {
+            verticalVelocity = 0;
             dashTime -= Time.deltaTime;
             dashDirection = lastMoveDirection;
-            dashDirection.y = 0; 
-
             controller.Move(dashDirection * dashSpeed * Time.deltaTime);
         }
         else IsDashing = false;
     }
-    public void RotationProcess()
+    private void RotationProcess()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
