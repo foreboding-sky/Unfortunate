@@ -55,16 +55,26 @@ public class PlayerMovement : MonoBehaviour
         AnimatorHelper();
     }
     private void AnimatorHelper()
-    {
-        if (controller.isGrounded) animator.SetBool(Grounded, true);
-        else animator.SetBool(Grounded, false);
-
-        if(controller.isGrounded && Moving) animator.SetBool(IsMoving , true);
+    {  
+        animator.SetBool(Grounded, PlayerGrounded());
+        
+        if(PlayerGrounded() && Moving) animator.SetBool(IsMoving , true);
         else animator.SetBool(IsMoving, false);
+    }
+    private bool PlayerGrounded()
+    {
+        bool grounded = (Physics.Raycast(controller.bounds.center, Vector3.down, controller.bounds.extents.y+ 0.1f));
+
+        if (grounded)
+        {
+            return true;
+        }
+        return false;
+        
     }
     private void Jump()
     {
-        if (controller.isGrounded)
+        if (PlayerGrounded())
         {
             numOfJumps = 0;
             verticalVelocity = -gravity * Time.deltaTime;

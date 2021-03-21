@@ -471,7 +471,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!114 &1195762898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,13 +487,13 @@ MonoBehaviour:
   max_hearts: 3
   curr_hearts: 6
   dash_cd: 3
-  jump_force: 15
+  jump_force: 1
   jump_number: 2
-  gravity: 50
-  dash_speed: 100
+  gravity: 2.3
+  dash_speed: 40
   move_speed: 10
   rotation_speed: 50
-  start_dash_time: 0.1
+  start_dash_time: 0.3
 --- !u!4 &1195762899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1132971790985194432, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
@@ -614,6 +614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 832247271, guid: 6e9d12e19c71d7649b955e36cb4a6da1, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1195762897}
     - target: {fileID: 155409310629915185, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
         type: 3}
       propertyPath: m_Name
@@ -632,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 1132971790985194432, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: 0.019
       objectReference: {fileID: 0}
     - target: {fileID: 1132971790985194432, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
         type: 3}
@@ -679,7 +683,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d6fcd6a7e2fefba4a8176eb8381e8a3b, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 832247271, guid: 6e9d12e19c71d7649b955e36cb4a6da1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e9d12e19c71d7649b955e36cb4a6da1, type: 3}
 --- !u!1 &1864798088
 GameObject:
@@ -693,7 +698,7 @@ GameObject:
   - component: {fileID: 1864798091}
   - component: {fileID: 1864798090}
   - component: {fileID: 1864798089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
