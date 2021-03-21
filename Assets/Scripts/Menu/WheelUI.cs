@@ -7,7 +7,9 @@ public class WheelUI : MonoBehaviour
 {
     public void MainMenu()
     {
-        SceneManager.LoadScene(9);
+        SaveSystem.instance.Save();
+        SceneManager.LoadScene(0);
+        
     }
     public void Shop()
     {

@@ -32,7 +32,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ToMainMenu()
     {
-        SceneManager.LoadScene(9);
+        SaveSystem.instance.Save();
+        SceneManager.LoadScene(0);
     }
     public void QuitToDesktop()
     {
@@ -43,21 +44,24 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0))
         {
-            if (paused == true)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Time.timeScale = 1;
-                pause_menu.SetActive(false);
-                paused = false;
-            }
-            else
-            {
-                Time.timeScale = 0;
-                pause_menu.SetActive(true);
-                paused = true;
-            }
+                if (paused == true)
+                {
+                    Time.timeScale = 1;
+                    pause_menu.SetActive(false);
+                    paused = false;
+                }
+                else
+                {
+                    Time.timeScale = 0;
+                    pause_menu.SetActive(true);
+                    paused = true;
+                }
 
+            }
         }
 
     }
