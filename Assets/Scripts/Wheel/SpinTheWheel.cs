@@ -13,7 +13,7 @@ public class SpinTheWheel : MonoBehaviour
     float turn;
     [SerializeField] float timer;
     bool is_spinning;
-    // Start is called before the first frame update
+
     void Start()
     {
         is_spinning = false;
@@ -21,13 +21,16 @@ public class SpinTheWheel : MonoBehaviour
         turn = -1;
     }
 
-    // Update is called once per frame
+    public void SpinTheWheelButton()
+    {
+        if (!is_spinning) SetTimer();
+    }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && is_spinning == false)
-        {
-            SetTimer();
-        }
+        //if(Input.GetKeyDown(KeyCode.Space) && is_spinning == false)
+        //{
+        //    SetTimer();
+        //}
         WheelSpin();
     }
     void WheelSpin()
