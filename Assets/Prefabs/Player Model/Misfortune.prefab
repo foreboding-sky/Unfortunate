@@ -40,13 +40,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1132971790985194432}
-  - component: {fileID: 1486365314308567591}
-  - component: {fileID: 1320127458728512140}
+  - component: {fileID: 4840458308543712669}
+  - component: {fileID: 556488991012643498}
   - component: {fileID: 8825539273839807383}
-  - component: {fileID: 4245884091202211886}
-  - component: {fileID: 8875095804309481437}
-  - component: {fileID: 4796423096039587704}
-  - component: {fileID: 75198168407127142}
+  - component: {fileID: 6028616662732617700}
+  - component: {fileID: 2487410636902138883}
+  - component: {fileID: 267422885308798647}
+  - component: {fileID: 710903941169285882}
   m_Layer: 0
   m_Name: Misfortune
   m_TagString: Untagged
@@ -73,7 +73,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1486365314308567591
+--- !u!114 &4840458308543712669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,11 +82,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 690ea0146224b8b4694a1925dddeb352, type: 3}
+  m_Script: {fileID: 11500000, guid: 5257889f1f4b07040878c0b79e15ebce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Meta: {fileID: 7151459402525250289}
---- !u!114 &1320127458728512140
+  Meta: {fileID: 11400000, guid: 700be906d998bc843a997803860806f2, type: 2}
+--- !u!114 &556488991012643498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1be281c37b9a7f442893b62503c81db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: -3408742444462814517}
-  Description: {fileID: 5299208474233961431}
+  Avatar: {fileID: 9000000, guid: e8ec748ac0f75904dbb74b81a5d329c7, type: 2}
+  Description: {fileID: 11400000, guid: 88df522974dcb2c4bab893e862a13ac3, type: 2}
 --- !u!95 &8825539273839807383
 Animator:
   serializedVersion: 3
@@ -109,7 +109,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
-  m_Avatar: {fileID: -3408742444462814517}
+  m_Avatar: {fileID: 9000000, guid: e8ec748ac0f75904dbb74b81a5d329c7, type: 2}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -119,7 +119,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4245884091202211886
+--- !u!114 &6028616662732617700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,11 +128,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b678c1df50cfb547990db24a32856da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ed1c4030ec75ac47bf25de109422d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BlendShapeAvatar: {fileID: 11400000, guid: b53c5a8aa628beb4aa0785da30084f61, type: 2}
---- !u!114 &8875095804309481437
+--- !u!114 &2487410636902138883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dedba1309bdf12b42af2362f52eea134, type: 3}
+  m_Script: {fileID: 11500000, guid: 82b46bfd11b67764e92fafc739314689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonBone: {fileID: 7807298829946205306}
@@ -153,7 +153,7 @@ MonoBehaviour:
     FirstPersonFlag: 0
   - Renderer: {fileID: 5238333025932739156}
     FirstPersonFlag: 0
---- !u!114 &4796423096039587704
+--- !u!114 &267422885308798647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0a1a470564f16f4f94acb4b9ef56367, type: 3}
+  m_Script: {fileID: 11500000, guid: c9986af895bcedb4c8685ebbb8772e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DrawGizmo: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   m_yaw: 0
   m_pitch: 0
---- !u!114 &75198168407127142
+--- !u!114 &710903941169285882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 155409310629915185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8b72334adf6f7948bd98b4f0a873949, type: 3}
+  m_Script: {fileID: 11500000, guid: df91fd6206f5de84eb911c757e422693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DrawGizmo: 0
@@ -584,23 +584,23 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3450463142752739320}
-  - component: {fileID: 5913606093209477379}
-  - component: {fileID: 4936158541894213757}
-  - component: {fileID: 2602988910322634534}
-  - component: {fileID: 2908693136862921473}
-  - component: {fileID: 7419375962880769575}
-  - component: {fileID: 3785278451093443561}
-  - component: {fileID: 8981253568524189308}
-  - component: {fileID: 6484889816918783715}
-  - component: {fileID: 8838412056133512664}
-  - component: {fileID: 5055833436356628849}
-  - component: {fileID: 703432956658238593}
-  - component: {fileID: 1812600993660760716}
-  - component: {fileID: 1998767198599187735}
-  - component: {fileID: 8759147329814039737}
-  - component: {fileID: 6615543678052581943}
-  - component: {fileID: 2492082564613562956}
-  - component: {fileID: 3197259100240538608}
+  - component: {fileID: 2068316673117271567}
+  - component: {fileID: 6457268467440932616}
+  - component: {fileID: 4085953372102983078}
+  - component: {fileID: 3330855611826932944}
+  - component: {fileID: 2046128675469356503}
+  - component: {fileID: 6976088804767592968}
+  - component: {fileID: 3452768668988607280}
+  - component: {fileID: 8522196225054642338}
+  - component: {fileID: 1587566380922519884}
+  - component: {fileID: 128917152527391340}
+  - component: {fileID: 5647307202874203228}
+  - component: {fileID: 2720800932808740390}
+  - component: {fileID: 4929492555713709873}
+  - component: {fileID: 1592579937991916319}
+  - component: {fileID: 294135569004159745}
+  - component: {fileID: 276094618904314609}
+  - component: {fileID: 8634117196697250504}
   m_Layer: 0
   m_Name: secondary
   m_TagString: Untagged
@@ -622,7 +622,7 @@ Transform:
   m_Father: {fileID: 1132971790985194432}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5913606093209477379
+--- !u!114 &2068316673117271567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: Bust
@@ -647,7 +647,8 @@ MonoBehaviour:
   - {fileID: 386323727829016584}
   m_hitRadius: 0.02
   ColliderGroups: []
---- !u!114 &4936158541894213757
+  m_updateType: 0
+--- !u!114 &6457268467440932616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -656,7 +657,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: Sleeve
@@ -674,7 +675,8 @@ MonoBehaviour:
   - {fileID: 4697235365516675979}
   m_hitRadius: 0.02
   ColliderGroups: []
---- !u!114 &2602988910322634534
+  m_updateType: 0
+--- !u!114 &4085953372102983078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -683,7 +685,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: Skirt
@@ -703,9 +705,10 @@ MonoBehaviour:
   - {fileID: 5123736288227653173}
   m_hitRadius: 0.02
   ColliderGroups:
-  - {fileID: 4154234683827810065}
-  - {fileID: 2107619080275956570}
---- !u!114 &2908693136862921473
+  - {fileID: 4746904886146933469}
+  - {fileID: 8344147232423959220}
+  m_updateType: 0
+--- !u!114 &3330855611826932944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -714,7 +717,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -729,17 +732,18 @@ MonoBehaviour:
   - {fileID: 2478506572527779570}
   m_hitRadius: 0.024
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &7419375962880769575
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &2046128675469356503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -748,7 +752,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -763,17 +767,18 @@ MonoBehaviour:
   - {fileID: 5145703335277016912}
   m_hitRadius: 0.024
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &3785278451093443561
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &6976088804767592968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -782,7 +787,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -797,17 +802,18 @@ MonoBehaviour:
   - {fileID: 2440501917162365107}
   m_hitRadius: 0.024
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &8981253568524189308
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &3452768668988607280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -816,7 +822,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -831,17 +837,18 @@ MonoBehaviour:
   - {fileID: 8720741769177882194}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &6484889816918783715
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &8522196225054642338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -850,7 +857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -865,17 +872,18 @@ MonoBehaviour:
   - {fileID: 3154550619948222813}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &8838412056133512664
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &1587566380922519884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -884,7 +892,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -899,17 +907,18 @@ MonoBehaviour:
   - {fileID: 3127726605949577732}
   m_hitRadius: 0.024
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &5055833436356628849
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &128917152527391340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -918,7 +927,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -933,17 +942,18 @@ MonoBehaviour:
   - {fileID: 1017282564244866465}
   m_hitRadius: 0.024
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &703432956658238593
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &5647307202874203228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -952,7 +962,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -967,17 +977,18 @@ MonoBehaviour:
   - {fileID: 6435427485478466875}
   m_hitRadius: 0.024070531
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &1812600993660760716
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &2720800932808740390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -986,7 +997,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -1001,17 +1012,18 @@ MonoBehaviour:
   - {fileID: 3759049945273401747}
   m_hitRadius: 0.024
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &1998767198599187735
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &4929492555713709873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1020,7 +1032,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -1035,17 +1047,18 @@ MonoBehaviour:
   - {fileID: 954593901532940922}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &8759147329814039737
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &1592579937991916319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1054,7 +1067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -1069,17 +1082,18 @@ MonoBehaviour:
   - {fileID: 1467226195134963718}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &6615543678052581943
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &294135569004159745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1088,7 +1102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -1103,17 +1117,18 @@ MonoBehaviour:
   - {fileID: 3126952181231164924}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &2492082564613562956
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &276094618904314609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1122,7 +1137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -1137,17 +1152,18 @@ MonoBehaviour:
   - {fileID: 6783502092062675886}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
---- !u!114 &3197259100240538608
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
+--- !u!114 &8634117196697250504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1156,7 +1172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069116897811431457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ea06e1753e16f4ca870c39c067c86b, type: 3}
+  m_Script: {fileID: 11500000, guid: 016033d4e8464ba45b426650b0ef159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_comment: 
@@ -1171,16 +1187,17 @@ MonoBehaviour:
   - {fileID: 4768217152865744891}
   m_hitRadius: 0.012
   ColliderGroups:
-  - {fileID: 9095467345110683140}
-  - {fileID: 1675109048003624948}
-  - {fileID: 7597207911674783960}
-  - {fileID: 4831138373800429316}
-  - {fileID: 3044731991128373597}
-  - {fileID: 4834141137584900865}
-  - {fileID: 7293214633315056314}
-  - {fileID: 8654768874129347221}
-  - {fileID: 6517990632256233697}
-  - {fileID: 6499142853191792268}
+  - {fileID: 5196924381611271847}
+  - {fileID: 5679789130550908007}
+  - {fileID: 4026365878562397905}
+  - {fileID: 2615288786010530299}
+  - {fileID: 2471815232475520013}
+  - {fileID: 4062737045446932758}
+  - {fileID: 2412350362227077303}
+  - {fileID: 5105846072228240392}
+  - {fileID: 93067685578410913}
+  - {fileID: 3478628472652374656}
+  m_updateType: 0
 --- !u!1 &1093242918874195903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1297,7 @@ SkinnedMeshRenderer:
     firstSubMesh: 0
     subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 7807298829946205306}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_ReceiveGI: 1
@@ -1555,7 +1572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5138453450727851969}
-  - component: {fileID: 8654768874129347221}
+  - component: {fileID: 5105846072228240392}
   m_Layer: 0
   m_Name: J_Bip_C_UpperChest
   m_TagString: Untagged
@@ -1582,7 +1599,7 @@ Transform:
   m_Father: {fileID: 3674925197709277609}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8654768874129347221
+--- !u!114 &5105846072228240392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1591,7 +1608,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1263003271071150472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -1704,7 +1721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7807298829946205306}
-  - component: {fileID: 9095467345110683140}
+  - component: {fileID: 5196924381611271847}
   m_Layer: 0
   m_Name: J_Bip_C_Head
   m_TagString: Untagged
@@ -1742,7 +1759,7 @@ Transform:
   m_Father: {fileID: 3053895960219815744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9095467345110683140
+--- !u!114 &5196924381611271847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1751,7 +1768,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1420179867810528809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -2260,7 +2277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2218173147172644435}
-  - component: {fileID: 4834141137584900865}
+  - component: {fileID: 4062737045446932758}
   m_Layer: 0
   m_Name: J_Bip_L_Hand
   m_TagString: Untagged
@@ -2288,7 +2305,7 @@ Transform:
   m_Father: {fileID: 8451260503649323556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4834141137584900865
+--- !u!114 &4062737045446932758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2297,7 +2314,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2177857984879066414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -2467,7 +2484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4013739545019544714}
-  - component: {fileID: 7293214633315056314}
+  - component: {fileID: 2412350362227077303}
   m_Layer: 0
   m_Name: J_Bip_R_Hand
   m_TagString: Untagged
@@ -2495,7 +2512,7 @@ Transform:
   m_Father: {fileID: 6236165733196583632}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7293214633315056314
+--- !u!114 &2412350362227077303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2504,7 +2521,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2634349389157291089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -2611,7 +2628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3420043485961899202}
-  - component: {fileID: 2107619080275956570}
+  - component: {fileID: 8344147232423959220}
   m_Layer: 0
   m_Name: J_Bip_R_UpperLeg
   m_TagString: Untagged
@@ -2636,7 +2653,7 @@ Transform:
   m_Father: {fileID: 2260329589346751841}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2107619080275956570
+--- !u!114 &8344147232423959220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2645,7 +2662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3220939762277949646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -2849,7 +2866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8451260503649323556}
-  - component: {fileID: 4831138373800429316}
+  - component: {fileID: 2615288786010530299}
   m_Layer: 0
   m_Name: J_Bip_L_LowerArm
   m_TagString: Untagged
@@ -2873,7 +2890,7 @@ Transform:
   m_Father: {fileID: 1404771497554991445}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4831138373800429316
+--- !u!114 &2615288786010530299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2882,7 +2899,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3735175269282997312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -2958,7 +2975,7 @@ SkinnedMeshRenderer:
     firstSubMesh: 0
     subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 7807298829946205306}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_ReceiveGI: 1
@@ -3480,7 +3497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3053895960219815744}
-  - component: {fileID: 6499142853191792268}
+  - component: {fileID: 3478628472652374656}
   m_Layer: 0
   m_Name: J_Bip_C_Neck
   m_TagString: Untagged
@@ -3503,7 +3520,7 @@ Transform:
   m_Father: {fileID: 5138453450727851969}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6499142853191792268
+--- !u!114 &3478628472652374656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3512,7 +3529,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4765150933197895552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -3713,7 +3730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8220770322855847603}
-  - component: {fileID: 6517990632256233697}
+  - component: {fileID: 93067685578410913}
   m_Layer: 0
   m_Name: J_Bip_C_Spine
   m_TagString: Untagged
@@ -3736,7 +3753,7 @@ Transform:
   m_Father: {fileID: 2260329589346751841}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6517990632256233697
+--- !u!114 &93067685578410913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3745,7 +3762,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5134264480878065741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -4271,7 +4288,7 @@ SkinnedMeshRenderer:
     firstSubMesh: 0
     subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 7807298829946205306}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_ReceiveGI: 1
@@ -5074,7 +5091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6236165733196583632}
-  - component: {fileID: 3044731991128373597}
+  - component: {fileID: 2471815232475520013}
   m_Layer: 0
   m_Name: J_Bip_R_LowerArm
   m_TagString: Untagged
@@ -5098,7 +5115,7 @@ Transform:
   m_Father: {fileID: 5967270477375330372}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3044731991128373597
+--- !u!114 &2471815232475520013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5107,7 +5124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6785920439833849558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -5283,7 +5300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404771497554991445}
-  - component: {fileID: 1675109048003624948}
+  - component: {fileID: 5679789130550908007}
   m_Layer: 0
   m_Name: J_Bip_L_UpperArm
   m_TagString: Untagged
@@ -5306,7 +5323,7 @@ Transform:
   m_Father: {fileID: 181557742662454234}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1675109048003624948
+--- !u!114 &5679789130550908007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5315,7 +5332,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7034645431636134319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -5886,7 +5903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5967270477375330372}
-  - component: {fileID: 7597207911674783960}
+  - component: {fileID: 4026365878562397905}
   m_Layer: 0
   m_Name: J_Bip_R_UpperArm
   m_TagString: Untagged
@@ -5909,7 +5926,7 @@ Transform:
   m_Father: {fileID: 547423634879238935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7597207911674783960
+--- !u!114 &4026365878562397905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5918,7 +5935,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8349686471963100062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -6061,7 +6078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8057059988872517552}
-  - component: {fileID: 4154234683827810065}
+  - component: {fileID: 4746904886146933469}
   m_Layer: 0
   m_Name: J_Bip_L_UpperLeg
   m_TagString: Untagged
@@ -6086,7 +6103,7 @@ Transform:
   m_Father: {fileID: 2260329589346751841}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4154234683827810065
+--- !u!114 &4746904886146933469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6095,7 +6112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8587391888258599817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646b65a4a57afd34d8c4ed557efb46a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0902d094ff2df1498145e719ca13ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Colliders:
@@ -6475,7 +6492,19 @@ Transform:
   m_Father: {fileID: 2395868203477119747}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!90 &-3408742444462814517
+--- !u!114 &6339635401524011315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
+  m_Name: Meta
+  m_EditorClassIdentifier: 
+--- !u!90 &7238490139625666825
 Avatar:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9870,7 +9899,7 @@ Avatar:
     m_HasTranslationDoF: 0
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 0
---- !u!114 &5299208474233961431
+--- !u!114 &9029555243373103125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9882,416 +9911,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976e99d37c093ce4c9b249c81c2cbdd5, type: 3}
   m_Name: AvatarDescription
   m_EditorClassIdentifier: 
-  armStretch: 0.05
-  legStretch: 0.05
-  upperArmTwist: 0.5
-  lowerArmTwist: 0.5
-  upperLegTwist: 0.5
-  lowerLegTwist: 0.5
-  feetSpacing: 0
-  hasTranslationDoF: 0
-  human:
-  - humanBone: 0
-    boneName: J_Bip_C_Hips
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 1
-    boneName: J_Bip_L_UpperLeg
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 2
-    boneName: J_Bip_R_UpperLeg
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 3
-    boneName: J_Bip_L_LowerLeg
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 4
-    boneName: J_Bip_R_LowerLeg
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 5
-    boneName: J_Bip_L_Foot
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 6
-    boneName: J_Bip_R_Foot
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 7
-    boneName: J_Bip_C_Spine
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 8
-    boneName: J_Bip_C_Chest
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 9
-    boneName: J_Bip_C_Neck
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 10
-    boneName: J_Bip_C_Head
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 11
-    boneName: J_Bip_L_Shoulder
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 12
-    boneName: J_Bip_R_Shoulder
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 13
-    boneName: J_Bip_L_UpperArm
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 14
-    boneName: J_Bip_R_UpperArm
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 15
-    boneName: J_Bip_L_LowerArm
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 16
-    boneName: J_Bip_R_LowerArm
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 17
-    boneName: J_Bip_L_Hand
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 18
-    boneName: J_Bip_R_Hand
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 19
-    boneName: J_Bip_L_ToeBase
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 20
-    boneName: J_Bip_R_ToeBase
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 21
-    boneName: J_Adj_L_FaceEye
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 22
-    boneName: J_Adj_R_FaceEye
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 24
-    boneName: J_Bip_L_Thumb1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 25
-    boneName: J_Bip_L_Thumb2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 26
-    boneName: J_Bip_L_Thumb3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 27
-    boneName: J_Bip_L_Index1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 28
-    boneName: J_Bip_L_Index2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 29
-    boneName: J_Bip_L_Index3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 30
-    boneName: J_Bip_L_Middle1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 31
-    boneName: J_Bip_L_Middle2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 32
-    boneName: J_Bip_L_Middle3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 33
-    boneName: J_Bip_L_Ring1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 34
-    boneName: J_Bip_L_Ring2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 35
-    boneName: J_Bip_L_Ring3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 36
-    boneName: J_Bip_L_Little1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 37
-    boneName: J_Bip_L_Little2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 38
-    boneName: J_Bip_L_Little3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 39
-    boneName: J_Bip_R_Thumb1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 40
-    boneName: J_Bip_R_Thumb2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 41
-    boneName: J_Bip_R_Thumb3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 42
-    boneName: J_Bip_R_Index1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 43
-    boneName: J_Bip_R_Index2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 44
-    boneName: J_Bip_R_Index3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 45
-    boneName: J_Bip_R_Middle1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 46
-    boneName: J_Bip_R_Middle2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 47
-    boneName: J_Bip_R_Middle3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 48
-    boneName: J_Bip_R_Ring1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 49
-    boneName: J_Bip_R_Ring2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 50
-    boneName: J_Bip_R_Ring3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 51
-    boneName: J_Bip_R_Little1
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 52
-    boneName: J_Bip_R_Little2
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 53
-    boneName: J_Bip_R_Little3
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
-  - humanBone: 54
-    boneName: J_Bip_C_UpperChest
-    useDefaultValues: 1
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
-    axisLength: 0
---- !u!114 &7151459402525250289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
-  m_Name: Meta
-  m_EditorClassIdentifier: 
-  ExporterVersion: VRoidStudio-0.13.1
-  Title: Misfortune
-  Version: 1
-  Author: Nisharu
-  ContactInformation: nope
-  Reference: :)
-  Thumbnail: {fileID: 2800000, guid: 33609e76ec45c4949b3857bff87083b3, type: 3}
-  AllowedUser: 2
-  ViolentUssage: 1
-  SexualUssage: 1
-  CommercialUssage: 1
-  OtherPermissionUrl: 
-  LicenseType: 0
-  OtherLicenseUrl: 
