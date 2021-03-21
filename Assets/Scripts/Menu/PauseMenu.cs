@@ -32,6 +32,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ToMainMenu()
     {
+        pause_menu.SetActive(false);
+        paused = false;
         SaveSystem.instance.Save();
         SceneManager.LoadScene(0);
     }
