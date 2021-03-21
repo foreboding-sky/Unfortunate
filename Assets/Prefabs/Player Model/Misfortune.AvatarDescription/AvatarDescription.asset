@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 976e99d37c093ce4c9b249c81c2cbdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b79318169ed5247bc9bffbc13e4ce4, type: 3}
   m_Name: AvatarDescription
   m_EditorClassIdentifier: 
   armStretch: 0.05

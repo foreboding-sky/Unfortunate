@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && numOfJumps < maxJumps)
         {
-            //animator.SetTrigger(Jumping);
+            animator.SetTrigger(Jumping);
             verticalVelocity = jumpForce;
             numOfJumps++;
         }
@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Dash"))
             {
                 IsDashing = true;
-                //animator.SetTrigger(Dashing);
+                animator.SetTrigger(Dashing);
                 dashTime = startDashTime;
                 nextDashTime = Time.time + cooldownDashTime;
             }
