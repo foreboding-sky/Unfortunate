@@ -15,14 +15,23 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float cooldownDashTime = 0;
     [SerializeField] private CharacterController controller;
 
+    private static readonly int Jumping = Animator.StringToHash("Jumping");
+    private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+    private static readonly int Grounded = Animator.StringToHash("Grounded");
+    private static readonly int Dashing = Animator.StringToHash("Dashing");
+    private static readonly int TurningLeft = Animator.StringToHash("TurningLeft");
+    private static readonly int TurningRight = Animator.StringToHash("TurningRight");
+    Animator animator;
     private int numOfJumps;
     private float dashTime;
     private float verticalVelocity;
     private Vector3 moveDirection;
     private Vector3 lastMoveDirection = Vector3.forward;
     private float nextDashTime = 0f;
+    private bool IsDashing = false;
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         moveSpeed = PlayerStats.instance.move_speed;
         rotationSpeed = PlayerStats.instance.rotation_speed;
         jumpForce = PlayerStats.instance.jump_force;
@@ -35,11 +44,21 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Move();
+        
+        if(!IsDashing) Move();
         Jump();
         Dash();
         RotationProcess();
     }
+    public void AnimatorHelper()
+    {
+        if (controller.isGrounded) animator.SetBool(Grounded, true);
+        else animator.SetBool(Grounded, false);
+
+        if(controller.velocity != Vector3.zero) animator.SetBool(IsMoving , true);
+        else animator.SetBool(IsMoving, false);
+    }
+    
     public void Jump()
     {
         if (controller.isGrounded)
@@ -53,12 +72,14 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && numOfJumps < maxJumps)
         {
+            animator.SetTrigger(Jumping);
             verticalVelocity = jumpForce;
             numOfJumps++;
         }
     }
     public void Move()
     {
+
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
@@ -73,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetButtonDown("Dash"))
             {
+                IsDashing = true;
+                animator.SetTrigger(Dashing);
                 dashTime = startDashTime;
                 nextDashTime = Time.time + cooldownDashTime;
             }
@@ -82,8 +105,10 @@ public class PlayerMovement : MonoBehaviour
             dashTime -= Time.deltaTime;
             dashDirection = lastMoveDirection;
             dashDirection.y = 0;
+
             controller.Move(dashDirection * dashSpeed * Time.deltaTime);
         }
+        else IsDashing = false;
     }
     public void RotationProcess()
     {
