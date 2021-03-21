@@ -11,6 +11,14 @@ public class Saveable : MonoBehaviour
     [ContextMenu("Generate Id")]
     private void GenerateId() => id = Guid.NewGuid().ToString();
 
+
+    public void ResetState()
+    {
+        foreach (var saveable in GetComponents<ISaveable>())
+        {
+            saveable.ResetState();
+        }       
+    }
     public object CaptureState()
     {
         var state = new Dictionary<string, object>();
