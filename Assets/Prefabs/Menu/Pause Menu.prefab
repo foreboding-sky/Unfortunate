@@ -1076,6 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 5228992411053558928}
   pause_menu: {fileID: 2689150534807284540}
+  DEATH: {fileID: 4583765766851831143}
 --- !u!1 &2689150534713753652
 GameObject:
   m_ObjectHideFlags: 0
