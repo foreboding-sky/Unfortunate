@@ -7,7 +7,7 @@ public class TrapCollision : MonoBehaviour
     public int damage = 1;
     private void OnTriggerEnter(Collider other)
     {
-        LifeSystem playerHealth = other.gameObject.transform.root.gameObject.GetComponent<LifeSystem>();
+        LifeSystem playerHealth = other.gameObject.GetComponent<LifeSystem>();
 
         if (playerHealth != null)
         {
