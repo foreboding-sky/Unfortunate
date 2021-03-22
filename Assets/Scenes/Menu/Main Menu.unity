@@ -225,6 +225,41 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: dash_cd
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: gravity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: dash_speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: jump_force
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: curr_hearts
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: jump_number
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
+        type: 3}
+      propertyPath: start_dash_time
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7164773676605794081, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
       propertyPath: m_Name
