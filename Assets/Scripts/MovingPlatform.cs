@@ -11,7 +11,7 @@ public class MovingPlatform : MonoBehaviour
     private bool isMoving = false;
     private float startTime;
     private Vector3 source;
-    private CharacterController player;
+    //private CharacterController player;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -55,16 +55,10 @@ public class MovingPlatform : MonoBehaviour
         float res = (first - second).magnitude;
         return res / speed;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.GetComponent<CharacterController>())
-        {
-            player = other.gameObject.GetComponent<CharacterController>();
-        }
-    }
+
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<CharacterController>())
+        if (other.gameObject.TryGetComponent<CharacterController>(out CharacterController player))
         {
             player.Move(rb.velocity * Time.deltaTime);
         } 

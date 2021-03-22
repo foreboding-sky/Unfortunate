@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool PlayerGrounded()
     {
-        bool grounded = (Physics.Raycast(controller.bounds.center, Vector3.down, controller.bounds.extents.y + 0.15f));
+        bool grounded = Physics.Raycast(controller.bounds.center, Vector3.down, controller.bounds.extents.y+ 0.15f);
 
         if (grounded || controller.isGrounded)
         {
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         if (PlayerGrounded())
         {
             numOfJumps = 0;
-            //verticalVelocity = -gravity * Time.deltaTime;
+            verticalVelocity = -gravity * Time.deltaTime;
         }
         else
         {
