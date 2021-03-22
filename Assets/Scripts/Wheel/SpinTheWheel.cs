@@ -66,22 +66,22 @@ public class SpinTheWheel : MonoBehaviour
                 SceneManager.LoadScene(2);
                 break;
             case var n when (n >= 90 && n < 135):
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(1);
                 break;
             case var n when (n >= 135 && n < 180):
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(2);
                 break;
             case var n when (n >= 180 && n < 225):
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(1);
                 break;
             case var n when (n >= 225 && n < 270):
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(2);
                 break;
             case var n when (n >= 270 && n < 315):
-                SceneManager.LoadScene(7);
+                SceneManager.LoadScene(1);
                 break;
             case var n when (n >= 315 && n < 360):
-                SceneManager.LoadScene(8);
+                SceneManager.LoadScene(2);
                 break;
         }
     }

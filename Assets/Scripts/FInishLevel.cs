@@ -10,6 +10,6 @@ public class FInishLevel : MonoBehaviour
     {
         FortunePoints.instance.AddPoints(2);
         SceneManager.LoadScene(9);
-        //CompletedLevels.instance.CompletedLevel();
+        CompletedLevels.instance.CompletedLevel();
     }
 }
