@@ -233,17 +233,17 @@ PrefabInstance:
     - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
       propertyPath: gravity
-      value: 50
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
       propertyPath: dash_speed
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
       propertyPath: jump_force
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
@@ -253,12 +253,12 @@ PrefabInstance:
     - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
       propertyPath: jump_number
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7164773676605794080, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
       propertyPath: start_dash_time
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7164773676605794081, guid: f49e9bdcaa9bd184fbcf6eb3b8ea4973,
         type: 3}
