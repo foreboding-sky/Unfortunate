@@ -31,7 +31,8 @@ public class Cannon : MonoBehaviour
     }
     private void BulletShoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(90f, 0f, 0f));
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
+        bullet.transform.localScale = (transform.localScale);
         Rigidbody rb = bullet.AddComponent<Rigidbody>();
         rb.useGravity = false;
         rb.velocity = bulletSpeed * bulletSpawnPoint.forward;

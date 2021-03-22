@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         LifeSystem playerHealth = other.gameObject.transform.root.gameObject.GetComponent<LifeSystem>();
+        MovingPlatform movingPlatform = other.gameObject.GetComponent<MovingPlatform>();
 
         if (playerHealth != null && canDamage)
         {
@@ -21,9 +22,16 @@ public class Bullet : MonoBehaviour
             playerHealth.TakeDamage(damage);
             canDamage = false;
         }
-        Vector3 position = other.ClosestPoint(transform.position);
-        //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        ParticleSystem hitVFX = Instantiate(destroyEffect, position, Quaternion.identity);
-        Destroy(gameObject);
+        if (movingPlatform!= null)
+        {
+
+        }
+        else
+        {
+            Vector3 position = other.ClosestPoint(transform.position);
+            //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            ParticleSystem hitVFX = Instantiate(destroyEffect, position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

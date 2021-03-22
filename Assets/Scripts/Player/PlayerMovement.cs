@@ -63,9 +63,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool PlayerGrounded()
     {
-        bool grounded = (Physics.Raycast(controller.bounds.center, Vector3.down, controller.bounds.extents.y+ 0.1f));
+        bool grounded = Physics.Raycast(controller.bounds.center, Vector3.down, controller.bounds.extents.y+ 0.15f);
 
-        if (grounded)
+        if (grounded || controller.isGrounded)
         {
             return true;
         }
