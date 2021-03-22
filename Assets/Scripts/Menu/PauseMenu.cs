@@ -6,9 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu instance = null;
+    void Start()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance == this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+    }
     // Start is called before the first frame update
     public GameObject settings;
     public GameObject pause_menu;
+    public GameObject DEATH;
     bool paused = false;
 
     public void Save()
@@ -42,6 +58,14 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
+
+    public void TRYAGAIN()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(9);
+        DEATH.SetActive(false);
+        PlayerStats.instance.curr_hearts = 5;
+    }    
     // Update is called once per frame
 
     private void Update()

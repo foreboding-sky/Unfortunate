@@ -75,8 +75,8 @@ public class LifeSystem : MonoBehaviour
     {
         if (health <= 0)
         {
-            //SceneManager.LoadScene(0);
-            Debug.Log("ded");
+            Time.timeScale = 0;
+            PauseMenu.instance.DEATH.SetActive(true);
             health = maxHealth;
         }
     }
