@@ -77,6 +77,7 @@ public class LifeSystem : MonoBehaviour
         {
             Time.timeScale = 0;
             PauseMenu.instance.DEATH.SetActive(true);
+            CompletedLevels.instance.ResetState();
             health = maxHealth;
         }
     }

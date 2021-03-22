@@ -23158,37 +23158,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c3b421f10a49f4b46bcd7864def4ed32, type: 3}
---- !u!1 &954642384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 155409310629915185, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1223331353}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &954642387 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 832247272, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1223331353}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &954642395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1132971790985194432, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
     type: 3}
   m_PrefabInstance: {fileID: 1223331353}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &954642397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954642384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b63eea4b1b2a7438e70fb1f065db3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 954642387}
 --- !u!1001 &956241953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29065,27 +29040,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 832247272, guid: 6e9d12e19c71d7649b955e36cb4a6da1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 832247272, guid: 6e9d12e19c71d7649b955e36cb4a6da1, type: 3}
-      propertyPath: m_SkinWidth
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 832247272, guid: 6e9d12e19c71d7649b955e36cb4a6da1, type: 3}
-      propertyPath: m_MinMoveDistance
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 155409310629915185, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
         type: 3}
       propertyPath: m_Name
       value: Misfortune
-      objectReference: {fileID: 0}
-    - target: {fileID: 155409310629915185, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1132971790985194432, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
         type: 3}
@@ -29140,11 +29098,6 @@ PrefabInstance:
     - target: {fileID: 1132971790985194432, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687372217352667593, guid: 6e9d12e19c71d7649b955e36cb4a6da1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
