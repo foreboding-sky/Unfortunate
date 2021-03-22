@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb5a6f1a8100774b859129813d6daf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 30
+  angle: 40
   speed: 1
-  start_time: 2
+  start_time: 5
   damage: 1
 --- !u!64 &2385680054233115688
 MeshCollider:
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 9160849045867386618}
   - component: {fileID: 3235915247928096231}
   m_Layer: 0
-  m_Name: Pendulum (2)
+  m_Name: Pendulum Slow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9160849045867386619}
-  m_LocalRotation: {x: -0, y: 0.16403696, z: -0, w: 0.98645425}
+  m_LocalRotation: {x: 0, y: 0.16404049, z: 0, w: 0.98645365}
   m_LocalPosition: {x: 31, y: 75.87936, z: -20.09999}
   m_LocalScale: {x: 5.0976005, y: 5.0976, z: 5.0976005}
   m_Children:
@@ -306,6 +306,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: b9d292b14d10abc4dac3c052a8c118e7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 720db251dc01a9545b3679ce4c1f2e6b, type: 2}
     - target: {fileID: 919132149155446097, guid: b9d292b14d10abc4dac3c052a8c118e7,
         type: 3}
       propertyPath: m_Name

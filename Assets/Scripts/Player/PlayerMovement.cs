@@ -30,8 +30,11 @@ public class PlayerMovement : MonoBehaviour
     private float nextDashTime = 0f;
     private bool IsDashing = false;
     private bool Moving = false;
+    Camera Camera;
+
     void Start()
     {
+        Camera = Camera.main;
         animator = gameObject.GetComponent<Animator>();
         moveSpeed = PlayerStats.instance.move_speed;
         rotationSpeed = PlayerStats.instance.rotation_speed;
@@ -89,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
             numOfJumps++;
         }
     }
+
+
     private void MovementProccess()
     {
         //Animator
@@ -96,14 +101,25 @@ public class PlayerMovement : MonoBehaviour
             Moving = true;
         else
             Moving = false;
-        //Calculation move vector
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
-        //Calculations for Dash script
+
+        var forward = Camera.transform.forward;
+        var right = Camera.transform.right;
+
+        //project forward and right vectors on the horizontal plane (y = 0)
+        forward.y = 0f;
+        right.y = 0;
+        forward.Normalize();
+        right.Normalize();
+
+        moveDirection = forward * Input.GetAxis("Vertical") + right * Input.GetAxis("Horizontal");
+        
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            lastMoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+           
+            lastMoveDirection = moveDirection;
         }
-        //Moving the player
+        moveDirection.y = verticalVelocity;
+
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
     private void Dash()
