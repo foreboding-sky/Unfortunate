@@ -16,6 +16,7 @@ public class LifeSystem : MonoBehaviour
         maxHealth = PlayerStats.instance.max_hearts + Upgrades.instance.bonus_hearts;
         health = PlayerStats.instance.curr_hearts;
         regen = Upgrades.instance.regen;
+        Debug.Log(health);
         Heal(regen);
         if (maxHealth > hearts.Length)
             maxHealth = hearts.Length;
